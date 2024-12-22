@@ -1,5 +1,9 @@
 /* General Reset */
 
+:root {
+    scroll-padding-top: 120px;
+}
+
 body,
 html {
     margin: 0;
@@ -63,7 +67,7 @@ nav ul li a:hover {
 /* Smooth Scrolling Fix */
 
 .section {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 120px;
     /* Adjust based on header height */
     opacity: 0;
     transform: translateY(20px);
@@ -111,34 +115,281 @@ nav ul li a:hover {
 
 /* Projects Grid */
 
+
+/* Projects Section */
+
 .projects-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    /* Two cards per row */
+    gap: 40px;
+    /* Space between cards */
+    margin: 40px auto;
+    max-width: 1600px;
+    /* Wider section */
+    padding: 0 40px;
+    /* Extra padding on the sides */
 }
 
 .project-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Lift on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow on hover */
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    /* Rounded corners for images */
+    margin-bottom: 20px;
+}
+
+#projects h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .project-card h3 {
-    font-size: 1.5rem;
-    color: #0071e3;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
 }
 
 .project-card p {
+    font-size: 1.2rem;
+    /* Bigger description text */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+        /* One card per row on smaller screens */
+    }
+}
+
+
+/* Work Experience Section */
+
+.work-experience-section {
+    background-color: #000000;
+    /* Dark blue background */
+    color: #ffffff;
+    /* White text */
+    padding: 60px 20px;
+}
+
+.work-experience-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #f0f0f0;
+}
+
+
+/* Timeline */
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 900px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    /* Thickness of the timeline line */
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1));
+    z-index: 1;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-icon {
+    position: absolute;
+    flex: 0 0 50px;
+    left: calc(50% - 25px);
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    overflow: hidden;
+}
+
+
+/* Fine-Tuning the Line to Pass Through Icons */
+
+.timeline-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: calc(100% + 20px);
+    background-color: #ffffff;
+    z-index: -1;
+}
+
+.timeline-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.timeline-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #070303;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+    margin-left: 20px;
+    margin-left: calc(50% + 40px)
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 0;
+    margin-right: calc(50% + 40px);
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.timeline-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #c7d6e2;
+}
+
+.timeline-content p {
+    margin: 0;
+    line-height: 1.5;
     font-size: 1rem;
-    color: #555;
+}
+
+.timeline-content .timeline-date {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #a3b8cc;
+}
+
+.timeline-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.timeline-content ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #e0efff;
+}
+
+
+/* Timeline Responsive Design */
+
+@media screen and (max-width: 768px) {
+    .timeline {
+        margin: 0 auto;
+        width: 2px;
+        left: -30%;
+    }
+    .timeline::before {
+        left: 10px;
+        /* Adjust the line for smaller screens */
+        transform: none;
+    }
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .timeline-icon {
+        left: -33px;
+        /* Adjust icon position for smaller screens */
+    }
+    .timeline-content {
+        width: 100%;
+        margin-left: 35px;
+        padding: 20px;
+    }
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-right: 0;
+    }
+    .timeline-content::before {
+        display: none;
+    }
+    .timeline-content h3 {
+        font-size: 1.5rem;
+    }
+    .timeline-content h4 {
+        font-size: 1.2rem;
+    }
+    .timeline-content p {
+        font-size: 1rem;
+    }
+    .timeline-content ul {
+        padding-left: 15px;
+        font-size: 0.9rem;
+    }
 }
 
 

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
+import Timeline_Icon from './images/circleIcon.png'
 
 const App = () => {
   useEffect(() => {
@@ -51,52 +52,79 @@ const App = () => {
         <section id="projects" className="container section">
           <h2>Projects</h2>
           <div className="projects-container">
-            <div className="project-card">
+            <div className="project-card"
+            style={{ backgroundImage: `url(${require('./images/pw_Image.png')})`}}
+            >
+            
               <h3>Portfolio Website</h3>
               <p>An interactive personal portfolio website built using React.js to showcase my projects, experience, and skills. Hosted on GitHub Pages for accessibility and ease of use.</p>
             </div>
-            <div className="project-card">
+            <div className="project-card"
+            style={{ backgroundImage: `url(${require('./images/datingApp.png')})`}}
+            >
               <h3>Swift iOS App</h3>
               <p>A dating app built using Swift and Xcode, featuring secure user authentication and optimized performance.</p>
             </div>
-            <div className="project-card">
+            <div className="project-card"
+            style={{ backgroundImage: `url(${require('./images/flowerImage1.avif')})`}}
+            >
               <h3>Flowers and Bouquets Website</h3>
               <p>A responsive e-commerce site showcasing floral arrangements, built with React.js and CSS.</p>
             </div>
-            <div className="project-card">
+            <div className="project-card"
+            style={{ backgroundImage: `url(${require('./images/intraImage2.avif')})`}}
+            >
               <h3>Intra-Bundle Web App</h3>
               <p>A React.js-based collaboration platform for teams to manage projects and share resources effectively.</p>
             </div>
-            <div className="project-card">
+            <div className="project-card"
+            style={{ backgroundImage: `url(${require('./images/iosmeta2.webp')})`}}
+            >
               <h3>iOS Application Development (Coursera – Meta)</h3>
-              <ul>
-                <li>Implemented robust version control practices using Git to ensure seamless collaboration and project tracking.</li>
-                <li>Built a feature-rich iOS app using Swift, applying core programming principles and best practices for clean and maintainable code.</li>
-                <li>Designed an intuitive user interface focusing on accessibility and aesthetics, using principles of UX/UI Design.</li>
-                <li>Created seamless user experiences using Swift UI, building visually appealing layouts and efficient navigation.</li>
-                <li>Optimized app performance, reducing memory usage and load times through advanced Swift programming techniques.</li>
-                <li>Integrated efficient data handling and persistence techniques to seamlessly fetch, store, and manage information.</li>
-                <li>Leveraged JavaScript skills to complement iOS functionality for smooth mobile development processes.</li>
-                <li>Gained foundational React Native skills and explored cross-platform app development techniques.</li>
-                <li>Delivered a fully functional iOS application as a Capstone Project, showcasing comprehensive Swift, UI/UX design, and data management expertise.</li>
-              </ul>
+              <p>Developed a feature-rich iOS app as a Capstone Project, leveraging Git for seamless collaboration, implementing advanced Swift programming and efficient data handling techniques, designing intuitive and accessible UI/UX with Swift UI.</p>
             </div>
           </div>
         </section>
 
-        <section id="experience" className="container section">
-          <h2>Experience</h2>
-          <p><strong>Web Developer (Part-Time)</strong> - University of Memphis (Aug 2022 - Dec 2023)</p>
-          <ul>
-            <li>Improved user interfaces using React.js, increasing efficiency by 51%.</li>
-            <li>Developed and managed JavaScript for the university website.</li>
-          </ul>
-          <p><strong>Software Developer Intern</strong> - Xlenz (Jan 2020 - Apr 2022)</p>
-          <ul>
-            <li>Built responsive applications using React and Angular.</li>
-            <li>Collaborated with the AR/VR team to enhance application features.</li>
-          </ul>
-        </section>
+        <section id="experience" className="work-experience-section">
+  <h2>Work Experience</h2>
+  <div className="timeline">
+    <div className="timeline-item">
+      <div className="timeline-icon">
+        <img src= {Timeline_Icon} alt="Software Engineer Icon" />
+      </div>
+      <div className="timeline-content">
+        <h3>Software Engineer</h3>
+        <h4>Bluechip Technologies | Internship</h4>
+        <p className="timeline-date">Mar 2024 – Sept 2024</p>
+        <ul>
+          <li>Developed responsive sidebars for an API marketplace web app using ChakraUI.</li>
+          <li>Built reusable table components reducing code by 15% and improving maintainability.</li>
+          <li>Collaborated with senior engineers using GitHub to streamline development.</li>
+          <li>Fixed bugs and added new features in a Learning Management System using Bootstrap.</li>
+          <li>Integrated seven endpoints in the RBAC module to streamline CRUD operations.</li>
+          <li>Created HTML templates for partner companies, including KPMG.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div className="timeline-item">
+      <div className="timeline-icon">
+        <img src= {Timeline_Icon} alt="Intern Icon" />
+      </div>
+      <div className="timeline-content">
+        <h3>Intern</h3>
+        <h4>NNPC | Internship</h4>
+        <p className="timeline-date">July 2023 – Sept 2023</p>
+        <ul>
+          <li>Designed cross-functional login and sign-up pages used within the company.</li>
+          <li>Streamlined front-end user interfaces to improve user experience.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         <section id="contact" className="container section">
           <h2>Contact</h2>
