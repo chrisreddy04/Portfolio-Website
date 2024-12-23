@@ -226,7 +226,8 @@ nav ul li a:hover {
     position: relative;
     margin: 0 auto;
     padding: 20px;
-    max-width: 900px;
+    max-width: 100%;
+    overflow: visible;
 }
 
 .timeline::before {
@@ -294,12 +295,14 @@ nav ul li a:hover {
 .timeline-content {
     flex: 1;
     padding: 20px;
-    background-color: #070303;
+    background-color: #000000;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 10px rgba(10, 10, 10, 0.25);
     z-index: 2;
+    overflow: visible;
     margin-left: 20px;
-    margin-left: calc(50% + 40px)
+    margin-left: calc(50% + 40px);
+    align-self: stretch;
 }
 
 .timeline-item:nth-child(even) .timeline-content {
@@ -344,14 +347,25 @@ nav ul li a:hover {
     color: #e0efff;
 }
 
+.timeline-content p,
+.timeline-content h3,
+.timeline-content h4 {
+    word-wrap: break-word;
+    /* Break long words */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    /* Compatibility with all browsers */
+    text-align: justify;
+    /* Improve readability */
+}
+
 
 /* Timeline Responsive Design */
 
 @media screen and (max-width: 768px) {
     .timeline {
-        margin: 0 auto;
-        width: 2px;
-        left: -30%;
+        /* Center the timeline for better appearance */
+        width: calc(90% - 40px);
     }
     .timeline::before {
         left: 10px;
@@ -367,9 +381,9 @@ nav ul li a:hover {
         /* Adjust icon position for smaller screens */
     }
     .timeline-content {
-        width: 100%;
-        margin-left: 35px;
-        padding: 20px;
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        padding: 15px;
     }
     .timeline-item:nth-child(even) .timeline-content {
         margin-right: 0;
@@ -379,12 +393,15 @@ nav ul li a:hover {
     }
     .timeline-content h3 {
         font-size: 1.5rem;
+        text-align: left;
     }
     .timeline-content h4 {
         font-size: 1.2rem;
+        text-align: left;
     }
     .timeline-content p {
         font-size: 1rem;
+        text-align: left;
     }
     .timeline-content ul {
         padding-left: 15px;
