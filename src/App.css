@@ -413,8 +413,8 @@ html {
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 20px;
-    left: 20px;
-    bottom: 40px;
+    left: auto;
+    bottom: 50px;
     position: relative;
 }
 
