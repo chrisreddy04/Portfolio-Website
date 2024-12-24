@@ -1,8 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
-import Timeline_Icon from './images/circleIcon.png'
+import Timeline_Icon from './images/circleIcon.png';
+import instagramIcon from './images/instagram.png';
+import linkedinIcon from './images/linkedin.png';
+import SkillsShowcase from "./SkillsShowcase";
+import AboutSection from "./AboutSection";
 
 const App = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   useEffect(() => {
     const handleScrollAnimation = () => {
       const sections = document.querySelectorAll(".section, .about-section");
@@ -22,32 +27,42 @@ const App = () => {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <div className="header-content">
-          <h1>Bala Christu Raj Gopu</h1>
-          <p>Web Developer | Software Engineer | Tech Enthusiast</p>
-          <nav>
-            <ul>
-              <li><a href="#about">About Me</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+  <div className="navbar">
+    <div className="navbar-left">
+      <h1>PORTFOLIO</h1>
+    </div>
+    <button className="menu-toggle" onClick={toggleMenu}>☰</button>
+    <nav className={`navbar-center ${isMenuOpen ? "open": ""}`}>
+      <ul>
+        <li><a href="#about">ABOUT ME</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div className="navbar-right">
+
+    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <img src={linkedinIcon} alt="LinkedIn" className="social-icon" />
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+        <img src={instagramIcon} alt="Instagram" className="social-icon" />
+      </a>
+    </div>
+  </div>
+</header>
+
 
       <main>
-        <section id="about" className="about-section">
-          <div className="about-container">
-            <h2>About Me</h2>
-            <p>
-              I am a passionate developer with expertise in creating web and mobile applications. My journey began with a strong interest in technology, leading to a Master's degree in Computer Science and hands-on experience in web development, CI/CD practices, and iOS development.
-            </p>
-          </div>
-        </section>
+        <AboutSection />
 
         <section id="projects" className="container section">
           <h2>Projects</h2>
@@ -125,13 +140,29 @@ const App = () => {
   </div>
 </section>
 
+<section id="skills" className="container section">
+  <h2>Skills</h2>
+  <SkillsShowcase/>
 
-        <section id="contact" className="container section">
-          <h2>Contact</h2>
-          <p>Email: <a href="mailto:bala@example.com">bala@example.com</a></p>
-          <p>LinkedIn: <a href="https://linkedin.com/in/bala">linkedin.com/in/bala</a></p>
-          <p>GitHub: <a href="https://github.com/bala">github.com/bala</a></p>
-        </section>
+</section>
+
+
+<section id="contact" className="contact-section">
+  <div className="contact-container">
+    <h2>Contact Me</h2>
+    <div className="contact-info">
+      <div className="contact-item">
+        <span className="icon">📞</span>
+        <a href="tel:+16628639295">+1 (662)-863-9295</a>
+      </div>
+      <div className="contact-item">
+        <span className="icon">📧</span>
+        <a href="mailto:christurajreddy@gmail.com">christurajreddy@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
       </main>
 
       <footer>
