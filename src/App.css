@@ -314,6 +314,16 @@ html {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 768px) {
+    .about-container h1 {
+        font-size: 2rem;
+    }
+    .about-container p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}
+
 
 /* Projects Grid */
 
@@ -425,6 +435,21 @@ html {
     .projects-container {
         grid-template-columns: 1fr;
         /* One card per row on smaller screens */
+        display: grid;
+        gap: 20px;
+    }
+    .project-card p {
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align: center;
+        padding: 0 20px;
+    }
+    .project-card {
+        padding: 15px;
+    }
+    .project-card h3 {
+        font-size: 1.5rem;
+        line-height: 1.4;
     }
 }
 
@@ -625,7 +650,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color: #ffffff;
     text-transform: capitalize;
@@ -650,6 +675,11 @@ html {
     width: 100%;
     animation: infinite-scroll 12s linear infinite;
 }
+
+
+/* Responsive design for skill carousel*/
+
+@media (max-width: 768px) {}
 
 
 /* Contact me Design*/
