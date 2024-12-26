@@ -114,16 +114,14 @@ const App = () => {
         <img src= {Timeline_Icon} alt="Software Engineer Icon" />
       </div>
       <div className="timeline-content">
-        <h3>Software Engineer</h3>
-        <h4>Bluechip Technologies | Internship</h4>
+        <h3>Web Developer</h3>
+        <h4>University of Memphis</h4>
         <p className="timeline-date">Mar 2024 – Sept 2024</p>
         <ul>
-          <li>Developed responsive sidebars for an API marketplace web app using ChakraUI.</li>
-          <li>Built reusable table components reducing code by 15% and improving maintainability.</li>
-          <li>Collaborated with senior engineers using GitHub to streamline development.</li>
-          <li>Fixed bugs and added new features in a Learning Management System using Bootstrap.</li>
-          <li>Integrated seven endpoints in the RBAC module to streamline CRUD operations.</li>
-          <li>Created HTML templates for partner companies, including KPMG.</li>
+          <li>Developed and optimized internal tools for evaluating application performance, improving efficiency by 51%.</li>
+          <li>Designed dashboards to monitor CI/CD pipelines and deployment metrics, streamlining workflows for the university website.</li>
+          <li>Defined automated workflows using Jenkins and Docker, enhancing deployment reliability and reducing downtime.</li>
+          <li>Collaborated with researchers to identify and resolve system issues, ensuring compliance with organizational standards.</li>
         </ul>
       </div>
     </div>
@@ -133,12 +131,15 @@ const App = () => {
         <img src= {Timeline_Icon} alt="Intern Icon" />
       </div>
       <div className="timeline-content">
-        <h3>Intern</h3>
-        <h4>NNPC | Internship</h4>
+        <h3>Graduate Junior Software Developer</h3>
+        <h4>Xlenz | Internship</h4>
         <p className="timeline-date">July 2023 – Sept 2023</p>
         <ul>
-          <li>Designed cross-functional login and sign-up pages used within the company.</li>
-          <li>Streamlined front-end user interfaces to improve user experience.</li>
+          <li>Designed and implemented tools and dashboards for real-time system monitoring and evaluation.</li>
+          <li>Troubleshoot and resolve root causes of system issues, improving reliability and reducing downtime by 30%.</li>
+          <li>Collaborated with cross-functional teams, including AI researchers and backend developers, to develop scalable and secure APIs.</li>
+          <li>Automated log analysis and data evaluation using Python and PostgreSQL, improving troubleshooting efficiency.</li>
+          <li>Deployed applications to AWS and integrated monitoring solutions using Splunk, ensuring optimal uptime and performance.</li>
         </ul>
       </div>
     </div>
