@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio-Website/static/css/main.cab5f26b.css",
-    "main.js": "/Portfolio-Website/static/js/main.da878fca.js",
+    "main.js": "/Portfolio-Website/static/js/main.1af9d5cc.js",
     "static/js/488.21a3b654.chunk.js": "/Portfolio-Website/static/js/488.21a3b654.chunk.js",
     "static/media/pw_Image.png": "/Portfolio-Website/static/media/pw_Image.aeffd8eb6dae8036eddc.png",
     "static/media/datingApp.png": "/Portfolio-Website/static/media/datingApp.a2350ae3468d7fd70aa2.png",
@@ -14,11 +14,11 @@
     "static/media/linkedin.png": "/Portfolio-Website/static/media/linkedin.f249b38224ca41a0b909.png",
     "index.html": "/Portfolio-Website/index.html",
     "main.cab5f26b.css.map": "/Portfolio-Website/static/css/main.cab5f26b.css.map",
-    "main.da878fca.js.map": "/Portfolio-Website/static/js/main.da878fca.js.map",
+    "main.1af9d5cc.js.map": "/Portfolio-Website/static/js/main.1af9d5cc.js.map",
     "488.21a3b654.chunk.js.map": "/Portfolio-Website/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cab5f26b.css",
-    "static/js/main.da878fca.js"
+    "static/js/main.1af9d5cc.js"
   ]
 }
