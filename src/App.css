@@ -217,7 +217,7 @@ html {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px 20px;
+        padding: 18px 20px;
         position: fixed;
         top: 0;
         width: 100%;
@@ -405,6 +405,25 @@ html {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+.download-resume-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000000;
+    /* Customize button color */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-resume-btn:hover {
+    background-color: #007bff;
+    /* Darker shade for hover effect */
+}
+
 @media (max-width: 768px) {
     .about-container h1 {
         font-size: 2rem;
@@ -432,6 +451,13 @@ html {
     /* Wider section */
     padding: 0 40px;
     /* Extra padding on the sides */
+    font-family: "Merriweather", sans-serif;
+    font-style: regular;
+}
+
+.ProjectsTitle h2 {
+    font-family: "Merriweather", sans-serif !important;
+    font-style: regular !important;
 }
 
 .project-card {
@@ -510,7 +536,7 @@ html {
 }
 
 .project-card p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     /* Bigger description text */
     color: #ffffff;
     line-height: 1.6;
@@ -561,6 +587,8 @@ html {
     font-size: 2.5rem;
     margin-bottom: 40px;
     color: #f0f0f0;
+    font-family: "Merriweather", sans-serif !important;
+    font-style: regular !important;
 }
 
 
@@ -714,7 +742,8 @@ html {
     margin-bottom: 40px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: "Merriweather", sans-serif;
+    font-style: regular;
 }
 
 .skills-carousel {
@@ -813,7 +842,8 @@ html {
     margin-bottom: 40px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: "Merriweather", sans-serif;
+    font-style: regular;
 }
 
 .contact-section {
@@ -826,6 +856,8 @@ html {
 .contact-container {
     max-width: 600px;
     margin: 0 auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .contact-container h2 {

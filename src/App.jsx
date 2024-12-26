@@ -70,7 +70,8 @@ const App = () => {
         <AboutSection />
 
         <section id="projects" className="container section">
-          <h2>Projects</h2>
+          <div className="ProjectsTitle"> <h2>Projects</h2> </div>
+          
           <div className="projects-container">
             <div className="project-card"
             style={{ backgroundImage: `url(${require('./images/pw_Image.png')})`}}
@@ -172,7 +173,7 @@ const App = () => {
       </main>
 
       <footer>
-        <p>&copy; 2024 Bala Christu Raj Gopu. Built with ❤️ and hosted on <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+        <p>&copy; 2024 Bala Christu Raj Gopu. All Rights Reserved.</p>
       </footer>
     </div>
   );
