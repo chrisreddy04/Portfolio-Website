@@ -72,6 +72,18 @@ html {
     /* Hides the cursor */
 }
 
+.clickable {
+    cursor: pointer;
+    /* Changes cursor to pointer on hover */
+    transition: color 0.3s ease;
+    /* Optional: smooth color transition */
+}
+
+.clickable:hover {
+    color: #007bff;
+    /* Optional: change color on hover */
+}
+
 
 /* Header Styling */
 
@@ -715,14 +727,15 @@ html {
 
 .carousel-track {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     animation: infinite-scroll 12s linear infinite;
     will-change: transform;
 }
 
 .skill-card {
-    flex: 0 0 13%;
+    flex: 0 0 auto;
     height: 150px;
+    width: 100px;
     margin: 0 10px;
     background: #000000;
     border-radius: 10px;
@@ -742,7 +755,7 @@ html {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-150%);
     }
 }
 
@@ -759,7 +772,34 @@ html {
 
 /* Responsive design for skill carousel*/
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+    @keyframes infinite-scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-300%);
+        }
+    }
+    .skill-card {
+        width: 90px;
+        /* Smaller cards for smaller screens */
+        height: 100px;
+        font-size: 0.9rem;
+    }
+    .carousel-track {
+        gap: 2px;
+        /* Reduce gap to fit more cards */
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-card {
+        width: 80px;
+        height: 80px;
+        font-size: 0.8rem;
+    }
+}
 
 
 /* Contact me Design*/

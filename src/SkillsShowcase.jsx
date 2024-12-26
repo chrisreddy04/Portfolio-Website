@@ -10,10 +10,26 @@ const skills = [
   "TypeScript",
   "Python",
   "CSS",
-  "HTML",
-  "Git",
+  "HTML5",
   "iOS Development",
   "Swift",
+  "SQL",
+  "Angular",
+  "Redux",
+  "GitHub",
+  "CI/CD",
+  "Firebase",
+  "XCode",
+  "Core Data",
+  "Cypress",
+  "Puppeteer",
+  "UI/UX",
+  "Storyboard UI",
+  "SwiftUI",
+  "RESTful APIs",
+  "Agile Methodologies",
+  "Database Management", 
+  "RBAC"
 
 ];
 

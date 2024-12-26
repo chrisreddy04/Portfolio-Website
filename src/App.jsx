@@ -40,7 +40,7 @@ const App = () => {
       <header className="App-header">
   <div className="navbar">
     <div className="navbar-left">
-      <h1>PORTFOLIO</h1>
+      <h1 className = "clickable" onClick={() => window.location.href = '/'}>PORTFOLIO</h1>
       <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle Menu">☰</button>
     </div>
     
@@ -89,7 +89,7 @@ const App = () => {
             style={{ backgroundImage: `url(${require('./images/flowerImage1.avif')})`}}
             >
               <h3>Flowers and Bouquets Website</h3>
-              <p>A responsive e-commerce site showcasing floral arrangements, built with React.js and CSS.</p>
+              <p>Developed a responsive e-commerce website for showcasing floral arrangements, allowing users to securely purchase products and leave reviews, built with Ruby on Rails, JavaScript, and CSS. Integrated RESTful APIs and a robust database to manage real-time inventory, orders, and user data, ensuring seamless performance and scalability.</p>
             </div>
             <div className="project-card"
             style={{ backgroundImage: `url(${require('./images/intraImage2.avif')})`}}
@@ -135,7 +135,7 @@ const App = () => {
         <h4>Xlenz | Internship</h4>
         <p className="timeline-date">July 2023 – Sept 2023</p>
         <ul>
-          <li>Designed and implemented tools and dashboards for real-time system monitoring and evaluation.</li>
+          <li>Designed and implemented tools and dashboards using React JS for real-time system monitoring and evaluation.</li>
           <li>Troubleshoot and resolve root causes of system issues, improving reliability and reducing downtime by 30%.</li>
           <li>Collaborated with cross-functional teams, including AI researchers and backend developers, to develop scalable and secure APIs.</li>
           <li>Automated log analysis and data evaluation using Python and PostgreSQL, improving troubleshooting efficiency.</li>
