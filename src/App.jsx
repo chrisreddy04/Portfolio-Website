@@ -40,7 +40,7 @@ const App = () => {
       <header className="App-header">
   <div className="navbar">
     <div className="navbar-left">
-      <h1 className = "clickable" onClick={() => window.location.href = '/'}>PORTFOLIO</h1>
+    <h1 className="clickable" onClick={() => window.location.href = process.env.PUBLIC_URL + '/'}>PORTFOLIO</h1>
       <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle Menu">☰</button>
     </div>
     
