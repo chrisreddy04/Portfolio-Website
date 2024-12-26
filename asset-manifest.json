@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/Portfolio-Website/static/css/main.ab48c017.css",
-    "main.js": "/Portfolio-Website/static/js/main.0f7aefcc.js",
+    "main.css": "/Portfolio-Website/static/css/main.cab5f26b.css",
+    "main.js": "/Portfolio-Website/static/js/main.da878fca.js",
     "static/js/488.21a3b654.chunk.js": "/Portfolio-Website/static/js/488.21a3b654.chunk.js",
     "static/media/pw_Image.png": "/Portfolio-Website/static/media/pw_Image.aeffd8eb6dae8036eddc.png",
     "static/media/datingApp.png": "/Portfolio-Website/static/media/datingApp.a2350ae3468d7fd70aa2.png",
     "static/media/background1.jpg": "/Portfolio-Website/static/media/background1.44b3fb445039f3f259ea.jpg",
     "static/media/flowerImage1.avif": "/Portfolio-Website/static/media/flowerImage1.7f7c9c716516cf4b56f8.avif",
+    "static/media/Christuraj_softwareDev_resume1.pdf": "/Portfolio-Website/static/media/Christuraj_softwareDev_resume1.9cdc490cf5c3ac40507c.pdf",
     "static/media/instagram.png": "/Portfolio-Website/static/media/instagram.28944b9a16197e849f88.png",
     "static/media/intraImage2.avif": "/Portfolio-Website/static/media/intraImage2.18feb4b3996915bfbe31.avif",
     "static/media/iosmeta2.webp": "/Portfolio-Website/static/media/iosmeta2.c76d7536b1819e0c2d09.webp",
     "static/media/linkedin.png": "/Portfolio-Website/static/media/linkedin.f249b38224ca41a0b909.png",
     "index.html": "/Portfolio-Website/index.html",
-    "main.ab48c017.css.map": "/Portfolio-Website/static/css/main.ab48c017.css.map",
-    "main.0f7aefcc.js.map": "/Portfolio-Website/static/js/main.0f7aefcc.js.map",
+    "main.cab5f26b.css.map": "/Portfolio-Website/static/css/main.cab5f26b.css.map",
+    "main.da878fca.js.map": "/Portfolio-Website/static/js/main.da878fca.js.map",
     "488.21a3b654.chunk.js.map": "/Portfolio-Website/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab48c017.css",
-    "static/js/main.0f7aefcc.js"
+    "static/css/main.cab5f26b.css",
+    "static/js/main.da878fca.js"
   ]
 }
