@@ -531,7 +531,7 @@ html {
         gap: 20px;
     }
     .project-card p {
-        font-size: 1rem;
+        font-size: 0.9rem;
         line-height: 1.4;
         text-align: center;
         padding: 0 20px;
@@ -540,7 +540,7 @@ html {
         padding: 15px;
     }
     .project-card h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         line-height: 1.4;
     }
 }
