@@ -31,29 +31,34 @@ const App = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleMenuSelection = () => {
+        setIsMenuOpen(false);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
   <div className="navbar">
     <div className="navbar-left">
       <h1>PORTFOLIO</h1>
+      <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle Menu">☰</button>
     </div>
-    <button className="menu-toggle" onClick={toggleMenu}>☰</button>
+    
     <nav className={`navbar-center ${isMenuOpen ? "open": ""}`}>
       <ul>
-        <li><a href="#about">ABOUT ME</a></li>
-        <li><a href="#projects">PROJECTS</a></li>
-        <li><a href="#experience">EXPERIENCE</a></li>
-        <li><a href="#skills">SKILLS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#about" onClick={handleMenuSelection}>ABOUT ME</a></li>
+        <li><a href="#projects" onClick={handleMenuSelection}>PROJECTS</a></li>
+        <li><a href="#experience" onClick={handleMenuSelection}>EXPERIENCE</a></li>
+        <li><a href="#skills" onClick={handleMenuSelection}>SKILLS</a></li>
+        <li><a href="#contact" onClick={handleMenuSelection}>CONTACT</a></li>
       </ul>
     </nav>
     <div className="navbar-right">
 
-    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.linkedin.com/in/bala-christuraj-gopu-69a89a179/" target="_blank" rel="noopener noreferrer">
         <img src={linkedinIcon} alt="LinkedIn" className="social-icon" />
       </a>
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.instagram.com/chrisreddy.__/?igsh=MW15dWlmazFxYnRteQ%3D%3D" target="_blank" rel="noopener noreferrer">
         <img src={instagramIcon} alt="Instagram" className="social-icon" />
       </a>
     </div>
@@ -78,7 +83,7 @@ const App = () => {
             style={{ backgroundImage: `url(${require('./images/datingApp.png')})`}}
             >
               <h3>Swift iOS App</h3>
-              <p>A dating app built using Swift and Xcode, featuring secure user authentication and optimized performance.</p>
+              <p>A cutting-edge dating app crafted with Swift and Xcode, offering seamless user experiences through a sleek and intuitive design. This app ensures top-tier security with robust user authentication and fortified data protection.</p>
             </div>
             <div className="project-card"
             style={{ backgroundImage: `url(${require('./images/flowerImage1.avif')})`}}
