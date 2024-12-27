@@ -8,13 +8,18 @@ import AboutSection from "./AboutSection";
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentPage] = React.useState("Home");
   useEffect(() => {
+
     const handleScrollAnimation = () => {
       const sections = document.querySelectorAll(".section, .about-section");
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom >= 0) {
           section.classList.add("visible");
+
+          //Document title
+          
         } else {
           section.classList.remove("visible");
         }
@@ -34,13 +39,23 @@ const App = () => {
   const handleMenuSelection = () => {
         setIsMenuOpen(false);
   };
+  
+  // UseEffect 2: Update the document title
+  useEffect(() => {
+    document.title = `Portfolio Website - ${currentPage}`;
+  }, [currentPage]); 
+
+  
 
   return (
     <div className="App">
       <header className="App-header">
   <div className="navbar">
     <div className="navbar-left">
-    <h1 className="clickable" onClick={() => window.location.href = process.env.PUBLIC_URL + '/'}>PORTFOLIO</h1>
+    <h1 className="clickable" 
+    onClick={() => 
+      window.location.href = process.env.PUBLIC_URL + '/'}>
+      PORTFOLIO</h1>
       <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle Menu">☰</button>
     </div>
     
