@@ -132,7 +132,7 @@ const App = () => {
       <div className="timeline-content">
         <h3>Web Developer</h3>
         <h4>University of Memphis</h4>
-        <p className="timeline-date">Mar 2024 – Sept 2024</p>
+        <p className="timeline-date">August 2022 – December 2022</p>
         <ul>
           <li>Developed and optimized internal tools for evaluating application performance, improving efficiency by 51%.</li>
           <li>Designed dashboards to monitor CI/CD pipelines and deployment metrics, streamlining workflows for the university website.</li>
@@ -149,7 +149,7 @@ const App = () => {
       <div className="timeline-content">
         <h3>Graduate Junior Software Developer</h3>
         <h4>Xlenz | Internship</h4>
-        <p className="timeline-date">July 2023 – Sept 2023</p>
+        <p className="timeline-date">January 2021 – April 2022</p>
         <ul>
           <li>Designed and implemented tools and dashboards using React JS for real-time system monitoring and evaluation.</li>
           <li>Troubleshoot and resolve root causes of system issues, improving reliability and reducing downtime by 30%.</li>
