@@ -130,14 +130,14 @@ const App = () => {
         <img src= {Timeline_Icon} alt="Software Engineer Icon" />
       </div>
       <div className="timeline-content">
-        <h3>Web Developer</h3>
+        <h3>Software Developer</h3>
         <h4>University of Memphis</h4>
         <p className="timeline-date">August 2022 – December 2022</p>
         <ul>
-          <li>Developed and optimized internal tools for evaluating application performance, improving efficiency by 51%.</li>
-          <li>Designed dashboards to monitor CI/CD pipelines and deployment metrics, streamlining workflows for the university website.</li>
-          <li>Defined automated workflows using Jenkins and Docker, enhancing deployment reliability and reducing downtime.</li>
-          <li>Collaborated with researchers to identify and resolve system issues, ensuring compliance with organizational standards.</li>
+          <li>Built and maintained features for student registration, course enrollment, and grade management, supporting over 5000+ daily users with 99% uptime during peak periods. Developed modular web components using JavaScript, HTML/CSS, and REST APIs.</li>
+          <li>Improved database performance and enhanced the UI by optimizing queries and simplifying navigation, reducing page load times by 30% and increasing student usage. Created custom views and wrote queries using Active Record with MySQL.</li>
+          <li>Set up CI/CD pipelines using Jenkins and Docker to automate deployments, reducing release times by 50% and ensuring consistent updates with minimal downtime in an Agile development environment.</li>
+          <li>Implemented access controls and security features to safeguard student data and ensure compliance with institutional policies. Worked closely with teams to address system issues and deploy fixes effectively.</li>
         </ul>
       </div>
     </div>
@@ -147,15 +147,14 @@ const App = () => {
         <img src= {Timeline_Icon} alt="Intern Icon" />
       </div>
       <div className="timeline-content">
-        <h3>Graduate Junior Software Developer</h3>
+        <h3>Junior Software Developer</h3>
         <h4>Xlenz | Internship</h4>
         <p className="timeline-date">January 2021 – April 2022</p>
         <ul>
-          <li>Designed and implemented tools and dashboards using React JS for real-time system monitoring and evaluation.</li>
-          <li>Troubleshoot and resolve root causes of system issues, improving reliability and reducing downtime by 30%.</li>
-          <li>Collaborated with cross-functional teams, including AI researchers and backend developers, to develop scalable and secure APIs.</li>
-          <li>Automated log analysis and data evaluation using Python and PostgreSQL, improving troubleshooting efficiency.</li>
-          <li>Deployed applications to AWS and integrated monitoring solutions using Splunk, ensuring optimal uptime and performance.</li>
+          <li>Developed and updated website pages using React JS to support AR/VR project features, improving navigation and access to project details. Managed version control with Git, handled builds using Jenkins, and conducted unit tests to ensure functionality before release.</li>
+          <li>Built a project tracking tool using React and PostgreSQL to display pending and approved projects, implementing role-based access controls and grouped data views to improve workflow visibility and reduce manual tracking efforts. </li>
+          <li>Integrated REST APIs to display real-time status updates for testing team project approvals and conducted integration tests to ensure performance and reliability, improving data flow and reducing approval delays by 25%.</li>
+          <li>Resolved a role-based access issue causing delays by debugging permission logic and optimizing database queries, reducing errors by 40%. Used Docker to create a consistent testing environment and ensure smooth deployments across teams.</li>
         </ul>
       </div>
     </div>
