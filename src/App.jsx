@@ -187,7 +187,7 @@ const App = () => {
       </main>
 
       <footer>
-        <p>&copy; 2024 Bala Christu Raj Gopu. All Rights Reserved.</p>
+        <p>&copy; 2025 Bala Christu Raj Gopu. All Rights Reserved.</p>
       </footer>
     </div>
   );
