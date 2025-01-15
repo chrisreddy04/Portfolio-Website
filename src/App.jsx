@@ -134,10 +134,15 @@ const App = () => {
         <h4>University of Memphis</h4>
         <p className="timeline-date">August 2022 – December 2022</p>
         <ul>
-          <li>Built and maintained features for student registration, course enrollment, and grade management, supporting over 5000+ daily users with 99% uptime during peak periods. Developed modular web components using JavaScript, HTML/CSS, and REST APIs.</li>
-          <li>Improved database performance and enhanced the UI by optimizing queries and simplifying navigation, reducing page load times by 30% and increasing student usage. Created custom views and wrote queries using Active Record with MySQL.</li>
-          <li>Set up CI/CD pipelines using Jenkins and Docker to automate deployments, reducing release times by 50% and ensuring consistent updates with minimal downtime in an Agile development environment.</li>
-          <li>Implemented access controls and security features to safeguard student data and ensure compliance with institutional policies. Worked closely with teams to address system issues and deploy fixes effectively.</li>
+          <li>Enhanced student features with React, TypeScript, and jQuery, improving navigation for 5,000+
+          users.</li>
+          <li>Restructured backend data workflows, cutting student record access time by 30% and optimizing
+          page load times.</li>
+          <li>Coordinated feature rollouts, ensuring zero downtime and reducing post-deployment bugs by
+          20%.</li>
+          <li>Collaborated with stakeholders to define feature requirements and deliver user-focused features.</li>
+          <li>Authored and maintained API documentation, reducing onboarding time by 30% and enhancing
+          integration workflows.</li>
         </ul>
       </div>
     </div>
@@ -151,10 +156,17 @@ const App = () => {
         <h4>Xlenz | Internship</h4>
         <p className="timeline-date">January 2021 – April 2022</p>
         <ul>
-          <li>Developed and updated website pages using React JS to support AR/VR project features, improving navigation and access to project details. Managed version control with Git, handled builds using Jenkins, and conducted unit tests to ensure functionality before release.</li>
-          <li>Built a project tracking tool using React and PostgreSQL to display pending and approved projects, implementing role-based access controls and grouped data views to improve workflow visibility and reduce manual tracking efforts. </li>
-          <li>Integrated REST APIs to display real-time status updates for testing team project approvals and conducted integration tests to ensure performance and reliability, improving data flow and reducing approval delays by 25%.</li>
-          <li>Resolved a role-based access issue causing delays by debugging permission logic and optimizing database queries, reducing errors by 40%. Used Docker to create a consistent testing environment and ensure smooth deployments across teams.</li>
+          <li>Built internal project tracking dashboards using React, Angular, and Vue with WebSocket
+          connections for real-time updates, reducing manual monitoring efforts by 40%.</li>
+          <li>Implemented Redis and Memcached caching, improving response times by 40% and handling
+          1,000+ concurrent requests. </li>
+          <li>Designed REST APIs with Node.js, improving data retrieval by 35% through optimized queries
+          and PostgreSQL database tuning.</li>
+          <li>Upgraded system architecture with Docker, ensuring reliable performance and zero downtime.</li>
+          <li>Designed 12+ mobile layouts with lazy loading, reducing load times by 30% and boosting
+          engagement.</li>
+          <li>Documented 40+ API endpoints with Swagger, streamlining integration for 25+ team members
+          and reducing downtime by 15%.</li>
         </ul>
       </div>
     </div>
