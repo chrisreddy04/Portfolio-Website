@@ -89,8 +89,8 @@ const App = () => {
           
           <div className="projects-container">
             <div className="project-card"
-            style={{ backgroundImage: `url(${require('./images/pw_Image.png')})`}}
-            >
+              style={{ backgroundImage: `url(${require('./images/pw_Image.png')})`}}
+             >
             
               <h3>Portfolio Website</h3>
               <p>An interactive personal portfolio website built using React.js to showcase my projects, experience, and skills. Hosted on GitHub Pages for accessibility and ease of use.</p>
@@ -100,6 +100,13 @@ const App = () => {
             >
               <h3>Swift iOS App</h3>
               <p>A cutting-edge dating app crafted with Swift and Xcode, offering seamless user experiences through a sleek and intuitive design. This app ensures top-tier security with robust user authentication and fortified data protection.</p>
+            </div>
+            <div className="project-card"
+              style={{ backgroundImage: `url(${require('./images/techImageBG2.jpg')})`}}
+             >
+            
+              <h3>C-Linq</h3>
+              <p>C-Linq is a contact manager handles 15,000+ contacts with efficient CRUD operations, search functionality, and fast data retrieval, built with React, Ruby on Rails, and PostgreSQL</p>
             </div>
             <div className="project-card"
             style={{ backgroundImage: `url(${require('./images/flowerImage1.avif')})`}}
