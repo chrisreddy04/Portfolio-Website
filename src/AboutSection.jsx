@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import ResumeFile from "./Resume/Christu_Resume_FullStack.pdf";
+import ResumeFile from "./Resume/Christu_Resume_Fullstack.pdf";
 
 const AboutSection = () => {
   const [finished, setFinished] = useState(false);
@@ -23,7 +23,7 @@ const AboutSection = () => {
         <p>
         I am Bala Christu Raj, a passionate and determined developer, building my expertise brick by brick to transform ideas into impactful digital experiences. With a Master’s degree in Computer Science and hands-on experience in web development, CI/CD practices, and iOS development, I approach challenges as opportunities to innovate. Fueled by creativity and resilience, I believe in crafting solutions that not only function but inspire.
         </p>
-        <a href={ResumeFile} download="Christuraj_SoftwareDev_Resume.pdf" className="download-resume-btn">
+        <a href={ResumeFile} download="Christu_Resume_Fullstack.pdf" className="download-resume-btn">
       Download Resume
     </a>
       </div>
