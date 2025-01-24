@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import MyResumeFile from "./Resume/Christu_Resume_Fullstack.pdf";
+import MyResumeFile from "../src/Resume/src/Resume/Christu_Resume_Fullstack.pdf";
 
 const AboutSection = () => {
   const [finished, setFinished] = useState(false);
