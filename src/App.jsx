@@ -70,7 +70,7 @@ const App = () => {
     </nav>
     <div className="navbar-right">
 
-    <a href="https://www.linkedin.com/in/bala-christuraj-gopu-69a89a179/" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.linkedin.com/in/christu-gopu-69a89a179/" target="_blank" rel="noopener noreferrer">
         <img src={linkedinIcon} alt="LinkedIn" className="social-icon" />
       </a>
       <a href="https://www.instagram.com/chrisreddy.__/?igsh=MW15dWlmazFxYnRteQ%3D%3D" target="_blank" rel="noopener noreferrer">
