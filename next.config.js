@@ -1,35 +1,24 @@
-/** @type {import('next').NextConfig} */
-
+const isProduction = process.env.NODE_ENV === 'production';
 const nextConfig = {
     reactStrictMode: true,
+    output: isProduction ? 'export' : undefined,
+    basePath: isProduction ? '/Portfolio-Website' : undefined,
+    assetPrefix: isProduction ? '/Portfolio-Website/' : undefined,
     swcMinify: true,
-    output: 'export', // Enables static export
-    basePath: process.env.NODE_ENV === 'production' ? '/Portfolio-Website' : '', // Add this
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/Portfolio-Website/' : '',
+    output: 'export',
     compiler: {
         styledComponents: true,
     },
     images: {
-        unoptimized: true, // Must be first image config
+        unoptimized: true,
     },
     trailingSlash: true,
     typescript: {
-        ignoreBuildErrors: true, // Temporary fix for TS errors
+        ignoreBuildErrors: true,
     },
     eslint: {
-        ignoreDuringBuilds: true, // Temporary fix for ESLint errors
+        ignoreDuringBuilds: true,
     },
-    webpack: (config) => {
-        config.module.rules.push({
-            test: /\.(png|jpg|jpeg|gif|svg|webp|mov|mp4|webm)$/i,
-            type: 'asset/resource',
-            generator: {
-                filename: 'static/[name].[hash][ext]'
-            }
-        });
-        return config;
-    }
-
 };
 
 module.exports = nextConfig;
