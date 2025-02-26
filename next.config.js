@@ -2,6 +2,10 @@
 const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
+    output: 'export', // Enables static export
+    images: {
+        unoptimized: true, // Disables Image Optimization API
+    },
     compiler: {
         styledComponents: true,
     },
@@ -19,6 +23,7 @@ const nextConfig = {
         // For local images
         domains: ['localhost'],
     },
+    trailingSlash: true,
 };
 
 module.exports = nextConfig;

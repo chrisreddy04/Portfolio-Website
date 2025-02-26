@@ -73,11 +73,11 @@ const App = () => {
 
     <a href="https://www.linkedin.com/in/christu-gopu-69a89a179/" target="_blank" rel="noopener noreferrer">
         <Image
-        src={linkedinIcon} alt="LinkedIn" width={32} height={32} className="social-icon" 
+        src={linkedinIcon} alt="LinkedIn" width={32} height={32} className="social-icon" unoptimized 
         />
       </a>
       <a href="https://www.instagram.com/chrisreddy.__/?igsh=MW15dWlmazFxYnRteQ%3D%3D" target="_blank" rel="noopener noreferrer">
-        <Image src={instagramIcon} alt="Instagram" width={32} height={32} className="social-icon" />
+        <Image src={instagramIcon} alt="Instagram" width={32} height={32} className="social-icon" unoptimized   />
       </a>
     </div>
   </div>
@@ -97,6 +97,7 @@ const App = () => {
                src="/images/pw_Image.png"
                alt="Portfolio Website"
                fill
+               unoptimized
              />
              
             
@@ -107,6 +108,7 @@ const App = () => {
               <Image src="/images/datingApp.png"
                alt= "Dating App"
                fill
+               unoptimized
                />
               <h3>Swift iOS App</h3>
               <p>A cutting-edge dating app crafted with Swift and Xcode, offering seamless user experiences through a sleek and intuitive design. This app ensures top-tier security with robust user authentication and fortified data protection.</p>
@@ -116,6 +118,7 @@ const App = () => {
                src="/images/techImageBG2.jpg"
                alt="Contact Manager"
                fill
+               unoptimized
              />
             
               <h3>C-Linq</h3>
@@ -126,6 +129,7 @@ const App = () => {
                src="/images/flowerImage1.avif"
                alt="Bouquets Website"
                fill
+               unoptimized
              />
              
               <h3>Flowers and Bouquets Website</h3>
@@ -136,6 +140,7 @@ const App = () => {
                src="/images/intraImage2.avif"
                alt="Intra Bundle"
                fill
+               unoptimized
              />
               <h3>Intra-Bundle Web App</h3>
               <p>A React.js-based collaboration platform for teams to manage projects and share resources effectively.</p>
@@ -145,6 +150,7 @@ const App = () => {
                src="/images/iosmeta2.webp"
                alt="iOS App"
                fill
+               unoptimized
              />
               <h3>iOS Application Development (Coursera – Meta)</h3>
               <p>Developed a feature-rich iOS app as a Capstone Project, leveraging Git for seamless collaboration, implementing advanced Swift programming and efficient data handling techniques, designing intuitive and accessible UI/UX with Swift UI.</p>
@@ -157,7 +163,7 @@ const App = () => {
   <div className="timeline">
     <div className="timeline-item">
       <div className="timeline-icon">
-        <Image src= {Timeline_Icon} alt="Software Engineer Icon" width={50} height={50} />
+        <Image src= {Timeline_Icon} alt="Software Engineer Icon" width={50} height={50} unoptimized/>
       </div>
       <div className="timeline-content">
         <h3>Software Developer</h3>
@@ -179,7 +185,7 @@ const App = () => {
 
     <div className="timeline-item">
       <div className="timeline-icon">
-        <Image src= {Timeline_Icon} alt="Intern Icon"  width={50} height={50}  />
+        <Image src= {Timeline_Icon} alt="Intern Icon"  width={50} height={50} unoptimized />
       </div>
       <div className="timeline-content">
         <h3>Junior Software Developer</h3>

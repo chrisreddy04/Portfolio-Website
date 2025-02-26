@@ -71,6 +71,7 @@ export default function MeCard() {
         fill
         className="object-cover object-center hover:scale-105 transition-transform duration-300"
         sizes="(max-width: 768px) 100vw, 50vw"
+        unoptimized
       />
     </div>
 
