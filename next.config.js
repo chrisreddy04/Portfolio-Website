@@ -19,6 +19,16 @@ const nextConfig = {
     eslint: {
         ignoreDuringBuilds: true,
     },
+    webpack: (config) => {
+        config.module.rules.push({
+            test: /\.(png|jpg|jpeg|gif|svg|webp|mp4|webm|mov)$/i,
+            type: 'asset/resource',
+            generator: {
+                filename: 'static/media/[name].[hash][ext]'
+            }
+        });
+        return config;
+    }
 };
 
 module.exports = nextConfig;
