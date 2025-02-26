@@ -21,7 +21,7 @@ const nextConfig = {
     },
     webpack: (config) => {
         config.module.rules.push({
-            test: /\.(png|jpg|jpeg|gif|svg|webp|mp4|webm)$/i,
+            test: /\.(png|jpg|jpeg|gif|svg|webp|mov|mp4|webm)$/i,
             type: 'asset/resource',
             generator: {
                 filename: 'static/media/[name].[hash][ext]'

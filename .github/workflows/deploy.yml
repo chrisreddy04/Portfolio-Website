@@ -12,11 +12,9 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: npm run build
-      - name: Copy Media Files
-        run: |
-          mkdir -p ./out/_next/static/media
-          cp -r ./public/images/* ./out/_next/static/media/
-          cp -r ./public/videos/* ./out/_next/static/media/
+      - name: Build Project
+        run: npm run build
+          
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

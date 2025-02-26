@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST='{"../src/AboutSection.jsx -> gsap":{"id":990,"files":[]},"../src/AboutSection.jsx -> gsap/ScrollTrigger":{"id":9805,"files":["static/chunks/805.9ab201cc18e433c4.js"]}}';
+self.__REACT_LOADABLE_MANIFEST="{}"
