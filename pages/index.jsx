@@ -93,7 +93,7 @@ const App = () => {
           
           <div className="projects-container">
             <div className="project-card">
-            <img
+            <Image
                src="/assets/images/pw_Image.png"
                alt="Portfolio Website"
                fill
