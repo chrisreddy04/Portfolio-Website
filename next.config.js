@@ -3,6 +3,8 @@ const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
     output: 'export', // Enables static export
+    basePath: process.env.NODE_ENV === 'production' ? '/Portfolio-Website' : '', // Add this
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/Portfolio-Website/' : '',
     compiler: {
         styledComponents: true,
     },
