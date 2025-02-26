@@ -24,7 +24,7 @@ const nextConfig = {
             test: /\.(png|jpg|jpeg|gif|svg|webp|mov|mp4|webm)$/i,
             type: 'asset/resource',
             generator: {
-                filename: 'static/media/[name].[hash][ext]'
+                filename: 'static/[name].[hash][ext]'
             }
         });
         return config;
