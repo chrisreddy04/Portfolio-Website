@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
-import Timeline_Icon from '/public/images/circleIcon.png';
-import instagramIcon from '../public/images/instagram.png';
-import linkedinIcon from '../public/images/linkedin.png';
+import Timeline_Icon from '../public/static/media/circleIcon.png';
+import instagramIcon from '../public/static/media/instagram.png';
+import linkedinIcon from '../public/static/media/linkedin.png';
 import SkillsShowcase from "../src/SkillsShowcase";
 import AboutSection from "../src/AboutSection";
 
@@ -94,7 +94,7 @@ const App = () => {
           <div className="projects-container">
             <div className="project-card">
             <Image
-               src="/images/pw_Image.png"
+               src="/static/media/pw_Image.png"
                alt="Portfolio Website"
                fill
                unoptimized
@@ -105,7 +105,7 @@ const App = () => {
               <p>An interactive personal portfolio website built using React.js to showcase my projects, experience, and skills. Hosted on GitHub Pages for accessibility and ease of use.</p>
             </div>
             <div className="project-card">
-              <Image src="/images/datingApp.png"
+              <Image src="/static/media/datingApp.png"
                alt= "Dating App"
                fill
                unoptimized
@@ -115,7 +115,7 @@ const App = () => {
             </div>
             <div className="project-card">
             <Image
-               src="/images/techImageBG2.jpg"
+               src="/static/media/techImageBG2.jpg"
                alt="Contact Manager"
                fill
                unoptimized
@@ -126,7 +126,7 @@ const App = () => {
             </div>
             <div className="project-card">
             <Image
-               src="/images/flowerImage1.avif"
+               src="/static/media/flowerImage1.avif"
                alt="Bouquets Website"
                fill
                unoptimized
@@ -137,7 +137,7 @@ const App = () => {
             </div>
             <div className="project-card"> 
              <Image
-               src="/images/intraImage2.avif"
+               src="/static/media/intraImage2.avif"
                alt="Intra Bundle"
                fill
                unoptimized
@@ -147,7 +147,7 @@ const App = () => {
             </div>
             <div className="project-card">
             <Image
-               src="/images/iosmeta2.webp"
+               src="/static/media/iosmeta2.webp"
                alt="iOS App"
                fill
                unoptimized

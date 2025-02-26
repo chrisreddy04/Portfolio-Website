@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
@@ -10,11 +11,6 @@ const nextConfig = {
     },
     images: {
         unoptimized: true, // Must be first image config
-        remotePatterns: [{
-            protocol: 'https',
-            hostname: 'example.com',
-        }, ],
-        domains: ['localhost'],
     },
     trailingSlash: true,
     typescript: {
@@ -23,7 +19,16 @@ const nextConfig = {
     eslint: {
         ignoreDuringBuilds: true, // Temporary fix for ESLint errors
     },
-
+    webpack: (config) => {
+        config.module.rules.push({
+            test: /\.(png|jpg|jpeg|gif|svg|webp|mp4|webm)$/i,
+            type: 'asset/resource',
+            generator: {
+                filename: 'static/media/[name].[hash][ext]'
+            }
+        });
+        return config;
+    }
 
 };
 
