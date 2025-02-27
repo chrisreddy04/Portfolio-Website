@@ -1,12 +1,12 @@
 {
   "../src/AboutSection.jsx -> gsap": {
-    "id": 990,
+    "id": "../src/AboutSection.jsx -> gsap",
     "files": []
   },
   "../src/AboutSection.jsx -> gsap/ScrollTrigger": {
-    "id": 9805,
+    "id": "../src/AboutSection.jsx -> gsap/ScrollTrigger",
     "files": [
-      "static/chunks/805.9ab201cc18e433c4.js"
+      "static/chunks/node_modules_gsap_ScrollTrigger_js.js"
     ]
   }
 }

@@ -127,7 +127,7 @@ const AboutSection = () => {
           <video 
             ref={videoRef}
             className="video-bg"
-            src="/assets/images/afterh.mov"  
+            src="/Portfolio/images/afterh.mov"  
             autoPlay
             muted
             loop
