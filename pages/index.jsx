@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
-import Timeline_Icon from '../public/assets/media/circleIcon.png';
-import instagramIcon from '../public/assets/media/instagram.png';
-import linkedinIcon from '../public/assets/media/linkedin.png';
+import Timeline_Icon from '../public/Portfolio-Website/media/circleIcon.png';
+import instagramIcon from '../public/Portfolio-Website/media/instagram.png';
+import linkedinIcon from '../public/Portfolio-Website/media/linkedin.png';
 import SkillsShowcase from "../src/SkillsShowcase";
 import AboutSection from "../src/AboutSection";
 import PortfolioImage from '../public/assets/images/pw_Image.png'
