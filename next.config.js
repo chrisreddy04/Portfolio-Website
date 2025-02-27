@@ -11,7 +11,7 @@ const nextConfig = {
         styledComponents: true,
     },
     images: {
-        unoptimized: isProduction,
+        unoptimized: true,
     },
     trailingSlash: true,
     typescript: {
