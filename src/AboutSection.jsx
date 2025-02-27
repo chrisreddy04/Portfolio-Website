@@ -98,7 +98,10 @@ const AboutSection = () => {
 
   return (
     <div className="page-wrapper">
-      <section id="about" className="about-section">
+      <section id="about" className="about-section"  style={{
+          position: "relative",
+          height: "100vh", 
+        }}>
         <svg 
           ref={textMaskRef}
           width="100%" 
@@ -124,7 +127,13 @@ const AboutSection = () => {
           </defs>
         </svg>
 
-        <div className="video-text-container">
+        <div className="video-text-container"  style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+          }}>
           <video 
             ref={videoRef}
             className="video-bg"
