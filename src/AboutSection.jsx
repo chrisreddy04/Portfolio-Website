@@ -139,30 +139,8 @@ const AboutSection = () => {
           </defs>
         </svg>
 
-        <div className="video-text-container"  style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-          }}>
-          <video 
-            ref={videoRef}
-            className="video-bg"
-            src={`${BASE_PATH}/Portfolio/images/afterh.mov`}
-            autoPlay
-            muted
-            loop
-            style={{ 
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              mask:maskUrl,
-              WebkitMask: maskUrl,
-            }}
-          />
-        </div>
+        <div style={{ width: "100%", height: "100%", background: "red", mask: maskUrl, WebkitMask: maskUrl }} />
+
       </section>
       
       <section ref={nextSectionRef} className="next-section">
