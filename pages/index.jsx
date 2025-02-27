@@ -107,7 +107,7 @@ const App = () => {
             </div>
             <div className="project-card">
               <Image 
-               src={`${process.env.NODE_ENV === 'production' ? '/Portfolio-Website' : ''}/assets/images/datingApp.png`}
+               src = "/Portfolio-Website/assets/images/datingApp.png"
                alt= "Dating App"
                fill
                unoptimized
