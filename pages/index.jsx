@@ -115,11 +115,10 @@ const App = () => {
               <p>A cutting-edge dating app crafted with Swift and Xcode, offering seamless user experiences through a sleek and intuitive design. This app ensures top-tier security with robust user authentication and fortified data protection.</p>
             </div>
             <div className="project-card">
-            <Image
+            <img
                src="/assets/images/techImageBG2.jpg"
                alt="Contact Manager"
-               fill
-               unoptimized
+
              />
             
               <h3>C-Linq</h3>
