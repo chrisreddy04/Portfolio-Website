@@ -6,6 +6,7 @@ import instagramIcon from '../public/assets/media/instagram.png';
 import linkedinIcon from '../public/assets/media/linkedin.png';
 import SkillsShowcase from "../src/SkillsShowcase";
 import AboutSection from "../src/AboutSection";
+import PortfolioImage from '../public/assets/images/pw_Image.png'
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -94,7 +95,7 @@ const App = () => {
           <div className="projects-container">
             <div className="project-card">
             <Image
-               src="/assets/images/pw_Image.png"
+               src={PortfolioImage}
                alt="Portfolio Website"
                fill
                unoptimized
