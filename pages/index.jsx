@@ -106,11 +106,11 @@ const App = () => {
               <p>An interactive personal portfolio website built using React.js to showcase my projects, experience, and skills. Hosted on GitHub Pages for accessibility and ease of use.</p>
             </div>
             <div className="project-card">
-              <Image 
+              <img 
                src = "/Portfolio-Website/assets/images/datingApp.png"
                alt= "Dating App"
-               fill
-               unoptimized
+               width="auto"
+        
                />
               <h3>Swift iOS App</h3>
               <p>A cutting-edge dating app crafted with Swift and Xcode, offering seamless user experiences through a sleek and intuitive design. This app ensures top-tier security with robust user authentication and fortified data protection.</p>

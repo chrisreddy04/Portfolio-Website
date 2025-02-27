@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"../src/AboutSection.jsx -> gsap\":{\"id\":\"../src/AboutSection.jsx -> gsap\",\"files\":[]},\"../src/AboutSection.jsx -> gsap/ScrollTrigger\":{\"id\":\"../src/AboutSection.jsx -> gsap/ScrollTrigger\",\"files\":[\"static/chunks/node_modules_gsap_ScrollTrigger_js.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST='{"../src/AboutSection.jsx -> gsap":{"id":990,"files":[]},"../src/AboutSection.jsx -> gsap/ScrollTrigger":{"id":9805,"files":["static/chunks/805.9ab201cc18e433c4.js"]}}';
