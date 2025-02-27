@@ -136,14 +136,14 @@ const App = () => {
           <div className="projects-container">
             {/* Project 1: Portfolio Website */}
             <div className="project-card">
-              <div className="relative h-64 w-full">
+              
                 <Image
                   src={`${BASE_PATH}/Portfolio/images/pw_Image.png`}
                   alt="Portfolio Website"
                   fill
                   unoptimized
                 />
-              </div>
+             
               <h3>Portfolio Website</h3>
               <p>
                 An interactive personal portfolio website built using React.js
@@ -154,10 +154,11 @@ const App = () => {
 
             {/* Project 2: Swift iOS App */}
             <div className="project-card">
-              <img
+              <Image
                 src={`${BASE_PATH}/Portfolio/images/datingApp.png`}
                 alt="Dating App"
-                style={{ width: "100%", height: "auto" }}
+                fill
+                unoptimized
               />
               <h3>Swift iOS App</h3>
               <p>
@@ -170,10 +171,11 @@ const App = () => {
 
             {/* Project 3: C-Linq */}
             <div className="project-card">
-              <img
+              <Image
                 src={`${BASE_PATH}/Portfolio/images/techImageBG2.jpg`}
                 alt="Contact Manager"
-                style={{ width: "100%", height: "auto" }}
+                fill
+                unoptimized
               />
               <h3>C-Linq</h3>
               <p>
@@ -185,14 +187,14 @@ const App = () => {
 
             {/* Project 4: Flowers and Bouquets Website */}
             <div className="project-card">
-              <div className="relative h-64 w-full">
+             
                 <Image
                   src={`${BASE_PATH}/Portfolio/images/flowerImage1.avif`}
                   alt="Bouquets Website"
                   fill
                   unoptimized
                 />
-              </div>
+             
               <h3>Flowers and Bouquets Website</h3>
               <p>
                 Developed a responsive e-commerce website for showcasing floral
@@ -206,14 +208,14 @@ const App = () => {
 
             {/* Project 5: Intra-Bundle Web App */}
             <div className="project-card">
-              <div className="relative h-64 w-full">
+              
                 <Image
                   src={`${BASE_PATH}/Portfolio/images/intraImage2.avif`}
                   alt="Intra Bundle"
                   fill
                   unoptimized
                 />
-              </div>
+             
               <h3>Intra-Bundle Web App</h3>
               <p>
                 A React.js-based collaboration platform for teams to manage projects
@@ -223,14 +225,14 @@ const App = () => {
 
             {/* Project 6: iOS App */}
             <div className="project-card">
-              <div className="relative h-64 w-full">
+             
                 <Image
                   src={`${BASE_PATH}/Portfolio/images/iosmeta2.webp`}
                   alt="iOS App"
                   fill
                   unoptimized
                 />
-              </div>
+             
               <h3>iOS Application Development (Coursera – Meta)</h3>
               <p>
                 Developed a feature-rich iOS app as a Capstone Project, leveraging Git
