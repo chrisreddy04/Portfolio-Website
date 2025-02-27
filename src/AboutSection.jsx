@@ -31,7 +31,7 @@ const AboutSection = () => {
           gsap.fromTo(videoRef.current,
             { yPercent: 0 },
             {
-              yPercent: 28,
+              yPercent: 65,
               ease: "none",
               scrollTrigger: {
                 trigger: "#about",
@@ -46,7 +46,7 @@ const AboutSection = () => {
           gsap.fromTo(textMaskRef.current,
             { yPercent: 0 },
             {
-              yPercent: -40,
+              yPercent: -30,
               ease: "none",
               scrollTrigger: {
                 trigger: "#about",
@@ -135,9 +135,10 @@ const AboutSection = () => {
             style={{ 
               position: "absolute",
               width: "100%",
-              height: "200%",
+              height: "100%",
               objectFit: "cover",
-              mask: "url(#text-mask)"
+              mask: "url(#text-mask)",
+              WebkitMask: "url(#text-mask)" 
             }}
           />
         </div>
