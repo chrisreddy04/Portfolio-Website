@@ -35,8 +35,4 @@ const nextConfig = {
     }
 };
 
-<<<<<<< HEAD
 module.exports = nextConfig;
-=======
-module.exports = nextConfig;
->>>>>>> eb307f2741031c5c40a610c5b3b70a3350df131f
