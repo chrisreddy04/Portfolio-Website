@@ -1,13 +1,23 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef,useState } from "react";
 import MeCard from "./MeCard";
 
 const BASE_PATH = process.env.NODE_ENV === "production" ? "/Portfolio-Website" : "";
 const AboutSection = () => {
+
+  const [maskUrl, setMaskUrl] = useState("");
   const videoRef = useRef(null);
   const textMaskRef = useRef(null);
   const nextSectionRef = useRef(null);
   const gsapRef = useRef(null);
   const ScrollTriggerRef = useRef(null);
+
+
+    // Set an absolute mask URL once the component mounts.
+    useEffect(() => {
+      if (typeof window !== "undefined") {
+        setMaskUrl(`url(${window.location.href}#text-mask)`);
+      }
+    }, []);
 
   useEffect(() => {
     let ctx;
@@ -146,8 +156,8 @@ const AboutSection = () => {
               width: "100%",
               height: "100%",
               objectFit: "cover",
-              mask: "url(#text-mask)",
-              WebkitMask: "url(#text-mask)" 
+              mask:maskUrl,
+              WebkitMask: maskUrl,
             }}
           />
         </div>
