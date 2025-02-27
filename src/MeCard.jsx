@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import Image from 'next/image';
 
-
+const BASE_PATH = process.env.NODE_ENV === "production" ? "/Portfolio-Website" : "";
 
 export default function MeCard() {
   const words = [
@@ -66,7 +66,7 @@ export default function MeCard() {
     {/* Profile Image Container */}
     <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 hover-float">
       <Image
-        src='/Portfolio/images/ppimage1.JPG'
+        src={`${BASE_PATH}/Portfolio/images/ppimage1.JPG`}
         alt="Profile"
         fill
         className="object-cover object-center hover:scale-105 transition-transform duration-300"

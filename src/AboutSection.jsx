@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import MeCard from "./MeCard";
 
+const BASE_PATH = process.env.NODE_ENV === "production" ? "/Portfolio-Website" : "";
 const AboutSection = () => {
   const videoRef = useRef(null);
   const textMaskRef = useRef(null);
@@ -127,7 +128,7 @@ const AboutSection = () => {
           <video 
             ref={videoRef}
             className="video-bg"
-            src="/Portfolio/images/afterh.mov"  
+            src={`${BASE_PATH}/Portfolio/images/afterh.mov`}
             autoPlay
             muted
             loop
