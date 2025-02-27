@@ -106,7 +106,8 @@ const App = () => {
               <p>An interactive personal portfolio website built using React.js to showcase my projects, experience, and skills. Hosted on GitHub Pages for accessibility and ease of use.</p>
             </div>
             <div className="project-card">
-              <Image src="/assets/images/datingApp.png"
+              <Image 
+               src={`${process.env.NODE_ENV === 'production' ? '/Portfolio-Website' : ''}/assets/images/datingApp.png`}
                alt= "Dating App"
                fill
                unoptimized
