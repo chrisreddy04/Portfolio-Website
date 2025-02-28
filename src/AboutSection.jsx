@@ -69,8 +69,7 @@ const AboutSection = () => {
                 x="50%"
                 y="50%"
                 fill="black"
-                fontFamily="Iceland"
-                fontSize="clamp(15rem, 53vw, 48rem)"
+                fontSize="48rem"
                 textAnchor="middle"
                 dominantBaseline="middle"
               >
