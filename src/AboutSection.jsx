@@ -69,7 +69,8 @@ const AboutSection = () => {
                 x="50%"
                 y="50%"
                 fill="black"
-                fontSize="48rem"
+
+                fontSize="clamp(15rem, 53vw, 48rem)"
                 textAnchor="middle"
                 dominantBaseline="middle"
               >
