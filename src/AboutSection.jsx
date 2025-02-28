@@ -1,93 +1,58 @@
-import React, { useEffect, useRef,useState } from "react";
+import React, { useEffect, useRef } from "react";
 import MeCard from "./MeCard";
 
-const BASE_PATH = process.env.NODE_ENV === "production" ? "/Portfolio-Website" : "";
 const AboutSection = () => {
-
-  const [maskUrl, setMaskUrl] = useState("");
+  const textRef = useRef(null);
+  const nextSectionRef = useRef(null);
   const videoRef = useRef(null);
   const textMaskRef = useRef(null);
-  const nextSectionRef = useRef(null);
-  const gsapRef = useRef(null);
-  const ScrollTriggerRef = useRef(null);
 
-
-    // Set an absolute mask URL once the component mounts.
-   useEffect(() => {
-  setMaskUrl("url(#text-mask)");
-}, []);
+  const gsap = useRef(null);
+  const ScrollTrigger = useRef(null);
 
   useEffect(() => {
     let ctx;
     
     const initializeAnimations = async () => {
       try {
-        // Dynamically import GSAP and plugins
         const gsap = (await import("gsap")).gsap;
         const ScrollTrigger = (await import("gsap/ScrollTrigger")).ScrollTrigger;
         
-        // Store in refs for cleanup
-        gsapRef.current = gsap;
-        ScrollTriggerRef.current = ScrollTrigger;
-
-        // Register plugins
         gsap.registerPlugin(ScrollTrigger);
 
-        // Animation context
         ctx = gsap.context(() => {
-          // Video animation
-          gsap.fromTo(videoRef.current,
+          // Text animation
+          gsap.fromTo(textRef.current,
             { yPercent: 0 },
             {
-              yPercent: 65,
+              yPercent: 30, // Moves text downward as you scroll
               ease: "none",
               scrollTrigger: {
                 trigger: "#about",
-                start: "top bottom",
-                end: "bottom top",
-                scrub: true
+                start: "top bottom", // When top of #about hits bottom of viewport
+                end: "bottom top",   // When bottom of #about hits top of viewport
+                scrub: true,
+                markers: false // Set to true for visual debugging
               }
             }
           );
 
-          // Text mask animation
-          gsap.fromTo(textMaskRef.current,
-            { yPercent: 0 },
-            {
-              yPercent: -30,
-              ease: "none",
-              scrollTrigger: {
-                trigger: "#about",
-                start: "top bottom",
-                end: "bottom top",
-                scrub: true
-              }
-            }
-          );
-         
-
-          // Next section animation
           gsap.fromTo(nextSectionRef.current,
-            { autoAlpha: 0.9, y: 0 },
+            { autoAlpha: 0, y: 100 },
             {
               autoAlpha: 1,
               y: 0,
               ease: "power2.out",
               scrollTrigger: {
                 trigger: ".next-section",
-                start: "top 80%",
-                end: "top 20%",
+                start: "top 90%", // Adjust these values to
+                end: "top 30%",   // control fade-in timing
                 scrub: 1,
               }
             }
           );
-
-        
-
-
-
-
         });
+
       } catch (error) {
         console.error("Error loading GSAP:", error);
       }
@@ -98,75 +63,41 @@ const AboutSection = () => {
     return () => {
       // Cleanup
       if (ctx) ctx.revert();
-      if (ScrollTriggerRef.current) {
-        ScrollTriggerRef.current.getAll().forEach(instance => instance.kill());
-      }
+     
     };
   }, []);
 
   return (
     <div className="page-wrapper">
-      <section id="about" className="about-section"  style={{
+      <section 
+        id="about" 
+        className="about-section" 
+        style={{
           position: "relative",
-          height: "100vh", 
-        }}>
-        <svg 
-          ref={textMaskRef}
-          width="100%" 
-          height="100%" 
-          style={{ position: 'absolute', zIndex: 2 }}
-        >
-          <defs>
-            <mask id="text-mask" x="0" y="0" width="100%" height="100%" >
-              <rect width="100%" height="100%" fill="black" />
-              <text
-                x="-20%"
-                y="40%"
-                dy=".35em"
-                textAnchor="start"
-                fontSize="clamp(15rem, 53vw, 48rem)"
-              fontFamily="Arial"
-                fill="white"
-                className="animate-slow-scroll"
-              >
-                CHRIS
-              </text>
-            </mask>
-          </defs>
-        </svg>
-
-        <div className="video-text-container"  style={{
+          height: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
+        <h1 
+          ref={textRef}
+          style={{
+            fontSize: "clamp(15rem, 53vw, 48rem)",
+            fontFamily: "'Iceland', sans-serif",
             position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-          }}>
-          <video 
-            ref={videoRef}
-            className="video-bg"
-            src={`${BASE_PATH}/Portfolio/images/afterh.mov`}
-            autoPlay
-            muted
-            loop
-            style={{ 
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              mask:maskUrl,
-              WebkitMask: maskUrl,
-            }}
-          />
-        </div>
+            zIndex: 2,
+            willChange: "transform", 
+            margin: 0
+          }}
+        >
+          CHRIS
+        </h1>
       </section>
       
       <section ref={nextSectionRef} className="next-section">
-       <MeCard />
+        <MeCard />
       </section>
-     
-
-    
     </div>
   );
 };
