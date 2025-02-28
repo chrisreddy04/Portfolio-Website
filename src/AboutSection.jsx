@@ -125,7 +125,7 @@ const AboutSection = () => {
                 dy=".35em"
                 textAnchor="start"
                 fontSize="clamp(15rem, 53vw, 48rem)"
-                fontFamily="Iceland"
+              fontFamily="Arial"
                 fill="white"
                 className="animate-slow-scroll"
               >
