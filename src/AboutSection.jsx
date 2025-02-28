@@ -12,13 +12,10 @@ const AboutSection = () => {
   const ScrollTriggerRef = useRef(null);
 
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      // Use origin + pathname so that the hash is appended correctly
-      const baseUrl = window.location.origin + window.location.pathname;
-      setMaskUrl(`url(${baseUrl}#text-mask)`);
-    }
-  }, []);
+    // Set an absolute mask URL once the component mounts.
+    useEffect(() => {
+      setMaskUrl("url(#text-mask)");
+    }, []);
 
   useEffect(() => {
     let ctx;
@@ -111,7 +108,7 @@ const AboutSection = () => {
     <div className="page-wrapper">
       <section id="about" className="about-section"  style={{
           position: "relative",
-          height: "100vh",overflow: "hidden", 
+          height: "100vh", 
         }}>
         <svg 
           ref={textMaskRef}
@@ -120,8 +117,7 @@ const AboutSection = () => {
           style={{ position: 'absolute', zIndex: 2 }}
         >
           <defs>
-            <mask id="text-mask" x="0" y="0" width="100%" height="100%"  maskUnits="userSpaceOnUse"
-              maskContentUnits="userSpaceOnUse">
+            <mask id="text-mask" x="0" y="0" width="100%" height="100%" >
               <rect width="100%" height="100%" fill="black" />
               <text
                 x="-20%"
@@ -139,8 +135,30 @@ const AboutSection = () => {
           </defs>
         </svg>
 
-        <div style={{ width: "100%", height: "100%", background: "red", mask: maskUrl, WebkitMask: maskUrl }} />
-
+        <div className="video-text-container"  style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+          }}>
+          <video 
+            ref={videoRef}
+            className="video-bg"
+            src={`${BASE_PATH}/Portfolio/images/afterh.mov`}
+            autoPlay
+            muted
+            loop
+            style={{ 
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              mask:maskUrl,
+              WebkitMask: maskUrl,
+            }}
+          />
+        </div>
       </section>
       
       <section ref={nextSectionRef} className="next-section">
