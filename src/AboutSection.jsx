@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import MeCard from "./MeCard";
 
+
 const AboutSection = () => {
   const textRef = useRef(null);
   const nextSectionRef = useRef(null);
@@ -13,7 +14,7 @@ const AboutSection = () => {
    // Responsive yPercent calculation
    const getYPercent = () => {
     if (typeof window === "undefined") return 30;
-    return window.innerWidth < 768 ? 85 : window.innerWidth > 1200 ? 35 : 35;
+    return window.innerWidth < 768 ? 100 : window.innerWidth > 1200 ? 35 : 35;
   };
 
   useEffect(() => {
