@@ -104,7 +104,6 @@ const AboutSection = () => {
           style={{
             fontSize: "clamp(15rem, 53vw, 48rem)",
             fontFamily: "'Iceland', sans-serif",
-            fontWeight: 700,
             position: "absolute",
             zIndex: 2,
             willChange: "transform", 
