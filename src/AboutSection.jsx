@@ -11,6 +11,28 @@ const AboutSection = () => {
   const gsap = useRef(null);
   const ScrollTrigger = useRef(null);
 
+// Add global styles
+useEffect(() => {
+  const style = document.createElement('style');
+  style.textContent = `
+  @keyframes gradient-scroll {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+`;
+  document.head.appendChild(style);
+
+  return () => document.head.removeChild(style);
+}, []);
+
+
    // Responsive yPercent calculation
    const getYPercent = () => {
     if (typeof window === "undefined") return 30;
@@ -99,25 +121,26 @@ const AboutSection = () => {
         }}
       >
         <h1 
-          ref={textRef}
-          className="bg-gradient-to-r from-emerald-950 to-slate-800 bg-clip-text text-transparent"
-          style={{
-            fontSize: "clamp(15rem, 53vw, 48rem)",
-            fontFamily: "'Iceland', sans-serif",
-            position: "absolute",
-            zIndex: 2,
-            willChange: "transform", 
-            margin: 0,
-            WebkitBackgroundClip: "text",
-            pointerEvents: "none",
-            lineHeight: 1
-            
-            
-
-          }}
-        >
-          CHRIS
-        </h1>
+      ref={textRef}
+      style={{
+        fontSize: "clamp(15rem, 53vw, 48rem)",
+        fontFamily: "'Iceland', sans-serif",
+        background: "linear-gradient(45deg, #ff3366, #ff6b6b, #4834d4, #686de0)",
+        backgroundSize: "400% 400%",
+        animation: "gradient-scroll 8s linear infinite",
+        WebkitTextFillColor: "transparent",
+        WebkitBackgroundClip: "text",
+        backgroundClip: "text",
+        position: "absolute",
+        zIndex: 2,
+        margin: 0,
+        pointerEvents: "none",
+        lineHeight: 1,
+        willChange: "background-position"
+      }}
+    >
+      CHRIS
+    </h1>
       </section>
       
       <section ref={nextSectionRef} className="next-section">
