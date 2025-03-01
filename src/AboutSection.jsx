@@ -10,6 +10,12 @@ const AboutSection = () => {
   const gsap = useRef(null);
   const ScrollTrigger = useRef(null);
 
+   // Responsive yPercent calculation
+   const getYPercent = () => {
+    if (typeof window === "undefined") return 30;
+    return window.innerWidth < 768 ? 85 : window.innerWidth > 1200 ? 35 : 35;
+  };
+
   useEffect(() => {
     let ctx;
     
@@ -25,14 +31,17 @@ const AboutSection = () => {
           gsap.fromTo(textRef.current,
             { yPercent: 0 },
             {
-              yPercent: 30, // Moves text downward as you scroll
+              yPercent: () => getYPercent(), // Moves text downward as you scroll
               ease: "none",
               scrollTrigger: {
                 trigger: "#about",
                 start: "top bottom", // When top of #about hits bottom of viewport
                 end: "bottom top",   // When bottom of #about hits top of viewport
                 scrub: true,
-                markers: false // Set to true for visual debugging
+                onRefresh: self => {
+                  // Update animation when screen size changes
+                  self.animation.progress(self.progress)
+                }
               }
             }
           );
@@ -52,12 +61,19 @@ const AboutSection = () => {
             }
           );
         });
+        // Handle window resize
+        const onResize = () => {
+          ScrollTrigger.refresh();
+        };
+        
+        window.addEventListener("resize", onResize);
+        return () => window.removeEventListener("resize", onResize);
 
       } catch (error) {
         console.error("Error loading GSAP:", error);
       }
     };
-
+ 
     initializeAnimations();
 
     return () => {
@@ -77,18 +93,26 @@ const AboutSection = () => {
           height: "100vh",
           display: "flex",
           alignItems: "center",
-          justifyContent: "center"
+          justifyContent: "center",
+
         }}
       >
         <h1 
           ref={textRef}
+          className="bg-gradient-to-r from-emerald-950 to-slate-800 bg-clip-text text-transparent"
           style={{
             fontSize: "clamp(15rem, 53vw, 48rem)",
             fontFamily: "'Iceland', sans-serif",
             position: "absolute",
             zIndex: 2,
             willChange: "transform", 
-            margin: 0
+            margin: 0,
+            WebkitBackgroundClip: "text",
+            pointerEvents: "none",
+            lineHeight: 1
+            
+            
+
           }}
         >
           CHRIS
