@@ -7,14 +7,10 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <style>{`
-            @font-face {
-              font-family: "Iceland";
-              src: url('${basePath}/Portfolio/fonts/Iceland-Regular.ttf') format('truetype');
-              font-weight: normal;
-              font-style: normal;
-            }
-          `}</style>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Iceland&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
