@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
+import VanillaTilt from "vanilla-tilt";
 import Link from "next/link";
 import SkillsShowcase from "../src/SkillsShowcase";
 import AboutSection from "../src/AboutSection";
+import ProjectCard from "../src/ProjectsSection";
 
 // Use BASE_PATH so that in production the URL becomes "/Portfolio-Website/Portfolio/images/..."
 const BASE_PATH = process.env.NODE_ENV === "production" ? "/Portfolio-Website" : "";
@@ -60,7 +62,9 @@ const App = () => {
   const handleMenuSelection = () => {
     setIsMenuOpen(false);
   };
-
+ 
+ 
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -77,8 +81,7 @@ const App = () => {
                 WebkitBackgroundClip: "text",
                 backgroundClip: "text",
                 pointerEvents: "none",
- 
-        willChange: "background-position"
+               willChange: "background-position"
               }}
             >
               PORTFOLIO
@@ -165,112 +168,57 @@ const App = () => {
 
           <div className="projects-container">
             {/* Project 1: Portfolio Website */}
-            <div className="project-card">
-              
-                <Image
-                  src={`${BASE_PATH}/Portfolio/images/pw_Image.png`}
-                  alt="Portfolio Website"
-                  fill
-                  unoptimized
-                />
-             
-              <h3>Portfolio Website</h3>
-              <p>
-                An interactive personal portfolio website built using React.js
+            <ProjectCard
+      title="Portfolio Website"
+      description="An interactive personal portfolio website built using React.js
                 to showcase my projects, experience, and skills. Hosted on GitHub
-                Pages for accessibility and ease of use.
-              </p>
-            </div>
-
-            {/* Project 2: Swift iOS App */}
-            <div className="project-card">
-              <Image
-                src={`${BASE_PATH}/Portfolio/images/datingApp.png`}
-                alt="Dating App"
-                fill
-                unoptimized
-              />
-              <h3>Swift iOS App</h3>
-              <p>
-                A cutting-edge dating app crafted with Swift and Xcode, offering
+                Pages for accessibility and ease of use."
+      image={`${BASE_PATH}/Portfolio/images/pw_Image.png`}
+    />
+            <ProjectCard
+      title="Swift iOS App"
+      description="A cutting-edge dating app crafted with Swift and Xcode, offering
                 seamless user experiences through a sleek and intuitive design.
                 This app ensures top-tier security with robust user authentication
-                and fortified data protection.
-              </p>
-            </div>
-
-            {/* Project 3: C-Linq */}
-            <div className="project-card">
-              <Image
-                src={`${BASE_PATH}/Portfolio/images/techImageBG2.jpg`}
-                alt="Contact Manager"
-                fill
-                unoptimized
-              />
-              <h3>C-Linq</h3>
-              <p>
-                C-Linq is a contact manager that handles 15,000+ contacts with
+                and fortified data protection."
+      image={`${BASE_PATH}/Portfolio/images/datingApp.png`}
+    />
+     
+     <ProjectCard
+      title="C-Linq"
+      description="C-Linq is a contact manager that handles 15,000+ contacts with
                 efficient CRUD operations, search functionality, and fast data
-                retrieval, built with React, Ruby on Rails, and PostgreSQL.
-              </p>
-            </div>
-
-            {/* Project 4: Flowers and Bouquets Website */}
-            <div className="project-card">
-             
-                <Image
-                  src={`${BASE_PATH}/Portfolio/images/flowerImage1.avif`}
-                  alt="Bouquets Website"
-                  fill
-                  unoptimized
-                />
-             
-              <h3>Flowers and Bouquets Website</h3>
-              <p>
-                Developed a responsive e-commerce website for showcasing floral
+                retrieval, built with React, Ruby on Rails, and PostgreSQL."
+      image={`${BASE_PATH}/Portfolio/images/techImageBG2.jpg`}
+    />
+           
+           <ProjectCard
+      title="Flowers and Bouquets Website"
+      description="Developed a responsive e-commerce website for showcasing floral
                 arrangements, allowing users to securely purchase products and
                 leave reviews, built with Ruby on Rails, JavaScript, and CSS.
                 Integrated RESTful APIs and a robust database to manage real-time
                 inventory, orders, and user data, ensuring seamless performance and
-                scalability.
-              </p>
-            </div>
-
-            {/* Project 5: Intra-Bundle Web App */}
-            <div className="project-card">
-              
-                <Image
-                  src={`${BASE_PATH}/Portfolio/images/intraImage2.avif`}
-                  alt="Intra Bundle"
-                  fill
-                  unoptimized
-                />
-             
-              <h3>Intra-Bundle Web App</h3>
-              <p>
-                A React.js-based collaboration platform for teams to manage projects
-                and share resources effectively.
-              </p>
-            </div>
-
-            {/* Project 6: iOS App */}
-            <div className="project-card">
-             
-                <Image
-                  src={`${BASE_PATH}/Portfolio/images/iosmeta2.webp`}
-                  alt="iOS App"
-                  fill
-                  unoptimized
-                />
-             
-              <h3>iOS Application Development (Coursera – Meta)</h3>
-              <p>
-                Developed a feature-rich iOS app as a Capstone Project, leveraging Git
+                scalability."
+      image={`${BASE_PATH}/Portfolio/images/flowerImage1.avif`}
+    />
+  
+  <ProjectCard
+      title="Intra-Bundle Web App"
+      description="A React.js-based collaboration platform for teams to manage projects
+                and share resources effectively."
+      image={`${BASE_PATH}/Portfolio/images/intraImage2.avif`}
+    />
+           
+           <ProjectCard
+      title="iOS Application Development (Coursera – Meta)"
+      description="Developed a feature-rich iOS app as a Capstone Project, leveraging Git
                 for seamless collaboration, implementing advanced Swift programming and
                 efficient data handling techniques, designing intuitive and accessible UI/UX
-                with Swift UI.
-              </p>
-            </div>
+                with Swift UI."
+      image={`${BASE_PATH}/Portfolio/images/iosmeta2.webp`}
+    />
+          
           </div>
         </section>
 
@@ -361,6 +309,8 @@ const App = () => {
             </div>
           </div>
         </section>
+
+     
 
         <section id="skills" className="container section">
           <h2>Skills</h2>

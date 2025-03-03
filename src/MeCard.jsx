@@ -102,7 +102,7 @@ export default function MeCard() {
                        text-2xl md:text-3xl lg:text-5xl
                        leading-tight md:leading-normal 
                        will-change-transform 
-                      bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent
+                      bg-gradient-to-l from-blue-600 to-purple-600 bg-clip-text text-transparent
                       transition-[opacity,transform] duration-500"
             style={{ 
               zIndex: index + 1,

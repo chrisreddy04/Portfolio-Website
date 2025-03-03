@@ -170,9 +170,6 @@ useEffect(() => {
   
       </section>
 
-   
-    
-
       <section ref={nextSectionRef} className="next-section">
         <MeCard />
       </section>

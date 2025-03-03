@@ -109,7 +109,7 @@ h1 {
     backdrop-filter: blur(12px); /* Creates the frosted glass effect */
     -webkit-backdrop-filter: blur(12px); /* For Safari support */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Depth shadow */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
 
@@ -381,7 +381,7 @@ h1 {
     padding: 5rem;
     background: #0d0c0c;
     color: black;
-    min-height: 100vh ;
+    min-height: 50vh ;
     z-index: 3;
     position: relative;
     transform: translateY(100px);
@@ -467,15 +467,18 @@ h1 {
 .ProjectsTitle h2 {
     font-family: "Merriweather", sans-serif !important;
     font-style: regular !important;
+    color: rgba(259,259,259,0.9)!important;
 }
 
 .project-card {
-    background-color: white;
+    background: rgba(255,255,255,0.1);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 20px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+  perspective: 100;
     overflow: hidden;
     color: white;
     display: flex;
@@ -488,6 +491,7 @@ h1 {
     height: 400px;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
     position: relative;
+    
 }
 
 .project-card::before {
@@ -509,10 +513,8 @@ h1 {
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    /* Lift on hover */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    /* Stronger shadow on hover */
+ 
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.4);
 }
 
 .project-card img {
