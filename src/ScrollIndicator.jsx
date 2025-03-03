@@ -1,6 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState} from "react";
 
 const ScrollIndicator = () => {
+    const [bottomSize, setBottomSize] = useState(30); 
+    
+    const getBottomSize = () => {
+        if (typeof window === "undefined") return 30;
+        return window.innerWidth < 768 ? 90 : window.innerWidth > 1200 ? 10 : 10;
+      };
+
+      useEffect(() => {
+        const handleResize = () => {
+          setBottomSize(getBottomSize());
+        };
+        
+        // Set initial value
+        setBottomSize(getBottomSize());
+        
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
     
   useEffect(() => {
     const style = document.createElement('style');
@@ -70,7 +88,9 @@ const ScrollIndicator = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-3">
+    <div className="fixed left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-3"
+    style={{ bottom: `${bottomSize}px`}}
+    >
       {/* Text */}
       <div className="slide-text text-[clamp(1rem,3vw,1rem)]  font-light min-w-[140px] tracking-widest relative ">
         SCROLL DOWN
