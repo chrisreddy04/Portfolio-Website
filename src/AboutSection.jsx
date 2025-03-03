@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import MeCard from "./MeCard";
+import ScrollIndicator from "./ScrollIndicator";
 
 
 const AboutSection = () => {
@@ -8,8 +9,11 @@ const AboutSection = () => {
   const videoRef = useRef(null);
   const textMaskRef = useRef(null);
 
+
   const gsap = useRef(null);
   const ScrollTrigger = useRef(null);
+
+  
 
 // Add global styles
 useEffect(() => {
@@ -36,7 +40,7 @@ useEffect(() => {
    // Responsive yPercent calculation
    const getYPercent = () => {
     if (typeof window === "undefined") return 30;
-    return window.innerWidth < 768 ? 100 : window.innerWidth > 1200 ? 35 : 35;
+    return window.innerWidth < 768 ? 100 : window.innerWidth > 1200 ? 25 : 25;
   };
 
   useEffect(() => {
@@ -51,6 +55,21 @@ useEffect(() => {
 
         ctx = gsap.context(() => {
           // Text animation
+          gsap.fromTo('.scroll-indicator',
+            { autoAlpha: 1},
+            {
+              autoAlpha: 0,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: "#about",
+                start: "top 0%",
+                end: "bottom 0%",
+                scrub: true,
+          
+               
+              }
+            }
+          );
           gsap.fromTo(textRef.current,
             { yPercent: 0 },
             {
@@ -82,6 +101,8 @@ useEffect(() => {
                 scrub: 1,
               }
             }
+
+            
           );
         });
         // Handle window resize
@@ -140,9 +161,18 @@ useEffect(() => {
       }}
     >
       CHRIS
+
     </h1>
+
+    <div className="scroll-indicator absolute bottom-0 left-1/2 -translate-x-1/2 z-[3]">
+          <ScrollIndicator />
+        </div>
+  
       </section>
-      
+
+   
+    
+
       <section ref={nextSectionRef} className="next-section">
         <MeCard />
       </section>
