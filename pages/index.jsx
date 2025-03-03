@@ -10,6 +10,25 @@ const BASE_PATH = process.env.NODE_ENV === "production" ? "/Portfolio-Website" :
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentPage] = useState("Home");
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+    @keyframes gradient-scroll {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  `;
+    document.head.appendChild(style);
+  
+    return () => document.head.removeChild(style);
+  }, []);
 
   useEffect(() => {
     const handleScrollAnimation = () => {
@@ -50,6 +69,17 @@ const App = () => {
             <h1
               className="clickable"
               onClick={() => (window.location.href = BASE_PATH + "/")}
+              style={{
+                background: "linear-gradient(45deg, #ff3366, #ff6b6b, #4834d4, #686de0)",
+                backgroundSize: "400% 400%",
+                animation: "gradient-scroll 6s linear infinite",
+                WebkitTextFillColor: "transparent",
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+                pointerEvents: "none",
+ 
+        willChange: "background-position"
+              }}
             >
               PORTFOLIO
             </h1>

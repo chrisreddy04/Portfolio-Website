@@ -100,12 +100,16 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 25px 0px;
-    background-color: transparent;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 10;
     overflow: visible;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(12px); /* Creates the frosted glass effect */
+    -webkit-backdrop-filter: blur(12px); /* For Safari support */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Depth shadow */
 }
 
 
@@ -199,7 +203,6 @@ h1 {
         position: fixed;
         top: 0;
         width: 100%;
-        background-color: #000;
         z-index: 1000;
     }
     .navbar-right {
@@ -258,7 +261,7 @@ h1 {
     }
     .menu-toggle {
         display: block;
-        padding: 0px;
+        margin-top: -10px;
     }
     .navbar-left {
         position: absolute;

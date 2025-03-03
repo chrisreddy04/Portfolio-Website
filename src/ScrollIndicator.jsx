@@ -5,7 +5,7 @@ const ScrollIndicator = () => {
     
     const getBottomSize = () => {
         if (typeof window === "undefined") return 30;
-        return window.innerWidth < 768 ? 90 : window.innerWidth > 1200 ? 10 : 10;
+        return window.innerWidth < 768 ? 100 : window.innerWidth > 1200 ? 10 : 10;
       };
 
       useEffect(() => {

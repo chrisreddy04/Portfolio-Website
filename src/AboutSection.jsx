@@ -148,7 +148,7 @@ useEffect(() => {
         fontFamily: "'Iceland', sans-serif",
         background: "linear-gradient(45deg, #ff3366, #ff6b6b, #4834d4, #686de0)",
         backgroundSize: "400% 400%",
-        animation: "gradient-scroll 8s linear infinite",
+        animation: "gradient-scroll 6s linear infinite",
         WebkitTextFillColor: "transparent",
         WebkitBackgroundClip: "text",
         backgroundClip: "text",
