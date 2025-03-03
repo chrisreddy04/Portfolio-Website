@@ -12,10 +12,21 @@ export default function MeCard() {
     'Problem Solver',
     'Tech Enthusiast',
     'Collaborator',
+    'Team Player',
     'Innovator',
     'Learner',
     'Optimist',
-    'Dreamer'
+    'Dreamer',
+    'Coder',
+    'Architect', 
+    'Engineer',
+    'Full-Stack Developer',
+    'UI/UX Designer',
+    'Frontend Maestro',
+    'Backend Wizard',
+  'Mobile Developer',
+  'DevOps Engineer',
+  'AI Explorer',
   ];
 
   const wordRef = useRef(null);
