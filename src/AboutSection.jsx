@@ -144,7 +144,7 @@ useEffect(() => {
         <h1 
       ref={textRef}
       style={{
-        fontSize: "clamp(15rem, 53vw, 48rem)",
+        fontSize: "clamp(10rem, 53vw, 48rem)",
         fontFamily: "'Iceland', sans-serif",
         background: "linear-gradient(45deg, #ff3366, #ff6b6b, #4834d4, #686de0)",
         backgroundSize: "400% 400%",
