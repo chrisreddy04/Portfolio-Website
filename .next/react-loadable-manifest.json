@@ -8,5 +8,9 @@
     "files": [
       "static/chunks/node_modules_gsap_ScrollTrigger_js.js"
     ]
+  },
+  "../src/LazyProjectCard.jsx -> ./ProjectsSection": {
+    "id": "../src/LazyProjectCard.jsx -> ./ProjectsSection",
+    "files": []
   }
 }
