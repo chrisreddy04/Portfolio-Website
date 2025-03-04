@@ -91,7 +91,7 @@ export default function MeCard() {
   <div className="text-3xl md:text-4xl xl:text-5xl font-bold">
     <div className="overflow-hidden relative">
       <span className="block text-lg md:text-xl font-medium text-gray-500 mb-2">
-        Hello, I'm
+        Hello, I'm a
       </span>
       <div ref={wordRef} className="relative min-h-[4rem] min-w-[10rem] md:min-h-[5rem]  overflow-visible">
         {words.map((word, index) => (
